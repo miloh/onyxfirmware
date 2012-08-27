@@ -25,23 +25,13 @@ premain()
 {
   gpio_init_all();
   // manual power up beep
- /* gpio_set_mode (GPIOB,9, GPIO_OUTPUT_PP);
+  gpio_set_mode (GPIOB,9, GPIO_OUTPUT_PP);
   for(int n=0;n<100;n++) {
     gpio_toggle_bit(GPIOB,9);
     delay_us(1000);
   }
   gpio_write_bit(GPIOB,9,0);
-*/
-/*
-  for(int i=0;i<11;i++) {
-    for(int n=0;n<100;n++) {
-      gpio_toggle_bit(GPIOB,9);
-      delay_us(1000);
-    }
-    delay_us(100000);
-  }
-*/
-//  power_standby();
+
   init();
   delay_us(100000);
 }
